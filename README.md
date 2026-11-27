@@ -2,6 +2,12 @@
 
 Personal Arch Linux dotfiles for Hyprland + Quickshell.
 
+## Branches
+
+- `development` — the live desktop tree (this branch).
+- `skills` — orphan branch holding only the Hermes user skills.
+- `master` — the initial commit, kept untouched.
+
 ## Structure
 
 - `config/` — application configuration (symlinked to `~/.config/`)
@@ -42,12 +48,18 @@ ln -s ~/.dotfiles/config/hermes/plugins/caveman-voice ~/.hermes/plugins/caveman-
 
 ## Skills
 
-User skills live on the separate `skills` branch, not in this tree. They change
-often and are kept out of the desktop configuration history on purpose:
+User skills live on the orphan `skills` branch, not in this tree. They change
+often and are kept out of the desktop configuration history on purpose. Attach
+that branch as a worktree and point Hermes at the skills directory inside it:
 
 ```bash
-git worktree add ~/.hermes/skills skills
+git worktree add ~/.local/share/hermes/skills skills
+ln -sfn ~/.local/share/hermes/skills/config/hermes/skills ~/.hermes/skills
+python3 scripts/skills/validate-user-skills.py \
+  --tree ~/.local/share/hermes/skills/config/hermes/skills
 ```
+
+See `README.md` on the `skills` branch for the editing workflow.
 
 Catalog-installed plugins (`advanced-delegation`) are **not** tracked here: their
 provenance and update records live in `~/.hermes/plugins/.install-metadata.json`.
