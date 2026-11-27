@@ -1,0 +1,128 @@
+{
+  "enabled": true,
+  "curves": {
+    "specialWorkSwitch": [
+      [
+        0.05,
+        0.7
+      ],
+      [
+        0.1,
+        1
+      ]
+    ],
+    "emphasizedAccel": [
+      [
+        0.3,
+        0
+      ],
+      [
+        0.8,
+        0.15
+      ]
+    ],
+    "emphasizedDecel": [
+      [
+        0.05,
+        0.7
+      ],
+      [
+        0.1,
+        1
+      ]
+    ],
+    "standard": [
+      [
+        0.2,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "leaves": [
+    {
+      "leaf": "layersIn",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "emphasizedDecel",
+      "style": "slide"
+    },
+    {
+      "leaf": "layersOut",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "emphasizedAccel",
+      "style": "slide"
+    },
+    {
+      "leaf": "fadeLayers",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "standard"
+    },
+    {
+      "leaf": "windowsIn",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "emphasizedDecel"
+    },
+    {
+      "leaf": "windowsOut",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "emphasizedAccel"
+    },
+    {
+      "leaf": "windowsMove",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "standard"
+    },
+    {
+      "leaf": "workspaces",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "standard",
+      "style": "slidevert"
+    },
+    {
+      "leaf": "specialWorkspace",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "specialWorkSwitch",
+      "style": "slidefadevert 15%"
+    },
+    {
+      "leaf": "fade",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "standard"
+    },
+    {
+      "leaf": "fadeDim",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "standard"
+    },
+    {
+      "leaf": "border",
+      "enabled": true,
+      "speed": 3,
+      "bezier": "standard"
+    }
+  ],
+  "ui": {
+    "barWorkspaceDuration": 180,
+    "barWorkspaceEasing": "Easing.OutCubic",
+    "controlDuration": 110,
+    "controlEasing": "Easing.OutCubic",
+    "entranceDuration": 200,
+    "entranceEasing": "Easing.OutCubic",
+    "entranceOffset": 8,
+    "pressDuration": 80
+  },
+  "reducedMotion": false
+}

@@ -1,0 +1,209 @@
+{
+  "spacing": {
+    "base": 4,
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "xxl": 32,
+    "tight": 6
+  },
+  "controls": {
+    "contentPad": 24,
+    "headerHeight": 30,
+    "footerHeight": 22,
+    "fieldHeight": 36,
+    "fieldHeightHero": 52,
+    "fieldHeightCompact": 32,
+    "buttonHeight": 32,
+    "buttonHeightLarge": 48,
+    "rowHeight": 46,
+    "iconButtonSize": 32,
+    "chipHeight": 28,
+    "dotSize": 6,
+    "keycapHeight": 18,
+    "ruleWidth": 32,
+    "ruleThickness": 1,
+    "cursorWidth": 10,
+    "cursorHeight": 20,
+    "zBadge": 2,
+    "zOverlay": 20,
+    "zPopover": 99,
+    "zModal": 100,
+    "sliderHeight": 6,
+    "sliderKnob": 14,
+    "heroRowHeight": 48,
+    "captionRowHeight": 16,
+    "readoutRowGap": 7,
+    "contentPadTight": 20,
+    "footerHeightTall": 28,
+    "fieldHeightDense": 34,
+    "fieldHeightTall": 56,
+    "buttonHeightDense": 34,
+    "rowHeightTall": 48,
+    "cardHeight": 44,
+    "spacingTight": 6,
+    "headerHeightTall": 32
+  },
+  "margins": {
+    "gapsIn": 4,
+    "edge": 6
+  },
+  "borders": {
+    "width": 1,
+    "radius": {
+      "none": 0,
+      "xs": 2,
+      "sm": 4,
+      "md": 6,
+      "lg": 8,
+      "xl": 12,
+      "full": 9999
+    }
+  },
+  "padding": {
+    "window": 12,
+    "container": 16
+  },
+  "blur": {
+    "enabled": false
+  },
+  "elevation": {
+    "level1": 1,
+    "level2": 3,
+    "level3": 6,
+    "level4": 8,
+    "level5": 12
+  },
+  "opacity": {
+    "frame": 0.88,
+    "frameLine": 0.25,
+    "active": 1.0,
+    "inactive": 1.0,
+    "terminal": 1.0,
+    "scrim": 0.45,
+    "backdrop": 0.35,
+    "overlay": 0.55,
+    "muted": 0.8,
+    "disabled": 0.55,
+    "placeholder": 0.75,
+    "cursor": 0.85,
+    "dim": 0.7,
+    "faint": 0.32,
+    "stateLayer": 0.09,
+    "barTrack": 0.14
+  },
+  "gtk": {
+    "theme": "Adwaita",
+    "iconTheme": "Papirus",
+    "preferDark": 0
+  },
+  "launcher": {
+    "gridCell": 112,
+    "gridColumns": 6,
+    "maxHeight": 560
+  },
+  "lockscreen": {
+    "cardWidth": 400,
+    "statusHeight": 14
+  },
+  "webapp": {
+    "width": 480,
+    "previewTile": 44,
+    "listMaxHeight": 272
+  },
+  "calendar": {
+    "cellSize": 36,
+    "cellGap": 2,
+    "columns": 7,
+    "rows": 6,
+    "navSize": 26,
+    "todayDot": 5
+  },
+  "tokens": {
+    "width": 480,
+    "sectionGap": 12,
+    "rowGap": 7,
+    "metricGap": 18,
+    "labelWidth": 78,
+    "percentWidth": 38,
+    "resetWidth": 72,
+    "contextWidth": 96,
+    "alertThreshold": 50,
+    "criticalThreshold": 80
+  },
+  "kanban": {
+    "width": 1240,
+    "columnGap": 16,
+    "maxHeight": 640,
+    "ghostWidth": 300,
+    "ghostHeight": 38,
+    "dialogMaxWidth": 430,
+    "counterWidth": 40,
+    "buttonMinWidth": 96,
+    "extraListMaxHeight": 160,
+    "cardPadding": 10,
+    "badgeHeight": 22,
+    "taskCardHeight": 46,
+    "columns": 4,
+    "cardFontSize": 13
+  },
+  "volume": {
+    "width": 300,
+    "step": 0.02
+  },
+  "brightness": {
+    "width": 300,
+    "step": 0.05,
+    "minimum": 0.05
+  },
+  "monitor": {
+    "width": 420,
+    "listMaxHeight": 360,
+    "popupRowHeight": 30,
+    "popupMaxHeight": 210
+  },
+  "wifi": {
+    "width": 360,
+    "rowGap": 2,
+    "listMaxHeight": 260,
+    "signalBars": 4,
+    "signalBarWidth": 3,
+    "signalBarGap": 2,
+    "signalHeight": 14
+  },
+  "metrics": {
+    "hairline": 1
+  },
+  "bar": {
+    "height": 28,
+    "inset": 0,
+    "padX": 14,
+    "itemGap": 14,
+    "dotSize": 6,
+    "dotActiveWidth": 20,
+    "separatorHeight": 10,
+    "clockGap": 8,
+    "iconGap": 8,
+    "dotHitPad": 5,
+    "padY": 3
+  },
+  "battery": {
+    "alertThreshold": 20,
+    "criticalThreshold": 10,
+    "width": 320,
+    "sectionGap": 12,
+    "rowGap": 7,
+    "metricGap": 18,
+    "labelWidth": 96
+  },
+  "notifications": {
+    "width": 340,
+    "offset": 12,
+    "gap": 6,
+    "maxPopups": 3,
+    "timeoutMs": 5000,
+    "slideMs": 240
+  }
+}

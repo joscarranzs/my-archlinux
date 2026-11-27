@@ -1,0 +1,36 @@
+{
+  "fonts": {
+    "mono": "JetBrainsMono Nerd Font",
+    "ui": "JetBrainsMono Nerd Font",
+    "icons": "Material Symbols Rounded"
+  },
+  "weights": {
+    "ui": 600,
+    "display": 600,
+    "text": 600,
+    "icons": 600
+  },
+  "sizes": {
+    "micro": 10,
+    "small": 11,
+    "caption": 12,
+    "body": 14,
+    "title": 17,
+    "display": 26,
+    "clock": 84,
+    "sddm": 24,
+    "terminal": 10,
+    "iconXs": 14,
+    "iconSm": 18,
+    "iconMd": 22,
+    "iconLg": 28,
+    "iconXl": 40,
+    "iconTile": 48
+  },
+  "letterSpacing": {
+    "label": 1.4,
+    "caption": 0.6,
+    "display": 0,
+    "password": 10
+  }
+}
