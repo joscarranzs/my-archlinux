@@ -1,0 +1,19 @@
+# Hermes writes its own caches and runtime state inside this tree; only the
+# skills themselves are source. Committing the hub index once cost 52 MB for
+# zero content, and the locks change on every run.
+.hub/
+.locks/
+.curator_state
+.curator_ledger.jsonl
+__pycache__/
+*.pyc
+.usage.json
+.usage.json.lock
+
+# Only user/ is source in this repo: the agent's and the curator's skills stay out
+# of git by policy, so a session cannot sweep one in by staging the tree.
+# `/*/` is anchored to this tree's top level on purpose: a bare `*/` also matches at
+# every depth, so it excludes `user/<skill>/` and `!user/` cannot rescue files whose
+# parent directory is excluded — the whole tree silently disappears from git status.
+/*/
+!/user/
