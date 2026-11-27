@@ -1,0 +1,42 @@
+diff --git a/hermes_cli/cli_terminal_input.py b/hermes_cli/cli_terminal_input.py
+index 604d848a5d..07db6e4f2f 100644
+--- a/hermes_cli/cli_terminal_input.py
++++ b/hermes_cli/cli_terminal_input.py
+@@ -362,13 +362,18 @@ def _is_ghostty_terminal(env: Optional[Mapping[str, str]] = None) -> bool:
+ 
+ 
+ def _terminal_supports_extended_enter_keys(env: Optional[Mapping[str, str]] = None) -> bool:
+-    """Allowlist of terminals where requesting modified-Enter reporting is safe (aligned with the Ink TUI)."""
++    """Allowlist of terminals where requesting modified-Enter reporting is safe (aligned with the Ink TUI).
++
++    ``herdr`` earns its place: it sets ``TERM_PROGRAM=herdr`` and ``TERM=xterm-256color`` in
++    every pane, so nothing else here matches, yet it re-encodes modified keys for the app
++    running inside the pane (its docs cover kitty keyboard event reporting).
++    """
+     env = os.environ if env is None else env
+     term_program = (env.get("TERM_PROGRAM") or "").strip()
+     term = (env.get("TERM") or "").strip().lower()
+     return bool(
+         env.get("WT_SESSION")
+-        or term_program in {"iTerm.app", "WezTerm", "ghostty", "vscode"}
++        or term_program in {"iTerm.app", "WezTerm", "ghostty", "vscode", "herdr"}
+         or env.get("KITTY_WINDOW_ID") or "kitty" in term
+         or term == "xterm-ghostty"
+         or term.startswith("tmux") or term_program.lower() == "tmux"
+diff --git a/ui-tui/packages/hermes-ink/src/ink/terminal.ts b/ui-tui/packages/hermes-ink/src/ink/terminal.ts
+index 81df8be640..3b6e1d12f7 100644
+--- a/ui-tui/packages/hermes-ink/src/ink/terminal.ts
++++ b/ui-tui/packages/hermes-ink/src/ink/terminal.ts
+@@ -318,7 +318,11 @@ export function parseOscColor(data: string): string | undefined {
+ // in xterm.js-based terminals like VS Code). tmux is allowlisted because it
+ // accepts modifyOtherKeys and doesn't forward the kitty sequence to the outer
+ // terminal.
+-const EXTENDED_KEYS_TERMINALS = ['iTerm.app', 'kitty', 'WezTerm', 'ghostty', 'tmux', 'windows-terminal', 'vscode']
++// Herdr is a multiplexer that sets TERM_PROGRAM=herdr in every pane and
++// re-encodes modified keys for the app inside it, so it belongs on this list
++// (its own docs cover kitty keyboard event reporting). Without it a pane's
++// TERM=xterm-256color matches nothing here and Shift+Enter collapses to CR.
++const EXTENDED_KEYS_TERMINALS = ['iTerm.app', 'kitty', 'WezTerm', 'ghostty', 'tmux', 'windows-terminal', 'vscode', 'herdr']
+ 
+ /** True if this terminal correctly handles extended key reporting
+  *  (Kitty keyboard protocol + xterm modifyOtherKeys). */
