@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- OpenCode mark, taken from the official favicon at https://opencode.ai/favicon.svg
+     (geometry unchanged). Only the #131010 plate underneath the glyph is dropped,
+     so the mark sits on the card's own tile instead of bringing a second square of
+     its own; the inner block keeps its #5A5858, as shipped.
+
+     The frame is the desktop ink (#2a2222), not the favicon's pure white: white is
+     what that plate can afford and a paper tile cannot. Measured, the white frame
+     was 78 % of the mark's visible pixels and vanished into `surfaceContainerHigh`
+     (scripts/icon-contrast.py in light mode said DISAPPEARS on paper).
+
+     The viewBox is cropped to the glyph's own bounds (128 96 256 320): the favicon
+     leaves a 25 % margin inside its 512 box, and at a 22 px tile that margin turned
+     the mark into an 11 px shape. Not generated: a brand mark is not a token. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="320" viewBox="128 96 256 320" fill="none">
+  <path d="M320 224V352H192V224H320Z" fill="#5A5858"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M384 416H128V96H384V416ZM320 160H192V352H320V160Z" fill="#2a2222"/>
+</svg>
