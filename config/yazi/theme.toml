@@ -1,0 +1,74 @@
+# Generated Yazi theme: warm-paper
+# Regenerate with: ./scripts/theme/apply-theme.py
+
+[manager]
+cwd = { fg = "#007952" }
+hovered = { fg = "#efecef", bg = "#007952" }
+preview_hovered = { underline = true }
+find_keyword = { fg = "#82661a", italic = true }
+find_position = { fg = "#340b09", bg = "reset", italic = true }
+marker_copied = { fg = "#0f5c35", bg = "#0f5c35" }
+marker_cut = { fg = "#d01b31", bg = "#d01b31" }
+marker_marked = { fg = "#82661a", bg = "#82661a" }
+marker_selected = { fg = "#007952", bg = "#007952" }
+tab_active = { fg = "#efecef", bg = "#007952" }
+tab_inactive = { fg = "#2a2222", bg = "#e8e5e8" }
+border_style = { fg = "#cfc9cf" }
+
+[status]
+separator_open = ""
+separator_close = ""
+mode_normal = { fg = "#efecef", bg = "#007952", bold = true }
+mode_select = { fg = "#efecef", bg = "#0f5c35", bold = true }
+mode_unset = { fg = "#efecef", bg = "#d01b31", bold = true }
+progress_label = { fg = "#2a2222", bold = true }
+progress_normal = { fg = "#007952", bg = "#e8e5e8" }
+progress_error = { fg = "#d01b31", bg = "#e8e5e8" }
+perm_type = { fg = "#007952" }
+perm_read = { fg = "#0f5c35" }
+perm_write = { fg = "#82661a" }
+perm_exec = { fg = "#d01b31" }
+perm_sep = { fg = "#cfc9cf" }
+
+[input]
+border = { fg = "#007952" }
+title = { fg = "#007952" }
+value = { fg = "#2a2222" }
+selected = { reversed = true }
+
+[select]
+border = { fg = "#007952" }
+active = { fg = "#340b09" }
+inactive = { fg = "#2a2222" }
+
+[which]
+mask = { bg = "#e8e5e8" }
+cand = { fg = "#007952" }
+rest = { fg = "#cfc9cf" }
+desc = { fg = "#2a2222" }
+separator = "  "
+separator_style = { fg = "#cfc9cf" }
+
+[help]
+on = { fg = "#340b09" }
+run = { fg = "#007952" }
+desc = { fg = "#2a2222" }
+hovered = { bg = "#e8e5e8", bold = true }
+footer = { fg = "#e8e5e8", bg = "#2a2222" }
+
+[filetype]
+rules = [
+  { url = "*/", fg = "#007952" },
+  { mime = "image/*", fg = "#82661a" },
+  { mime = "video/*", fg = "#340b09" },
+  { mime = "audio/*", fg = "#0f5c35" },
+  { mime = "application/zip", fg = "#d01b31" },
+  { mime = "application/gzip", fg = "#d01b31" },
+  { mime = "application/x-tar", fg = "#d01b31" },
+  { mime = "application/x-bzip", fg = "#d01b31" },
+  { mime = "application/x-7z-compressed", fg = "#d01b31" },
+  { mime = "application/x-rar", fg = "#d01b31" },
+  { mime = "application/pdf", fg = "#503d0c" },
+  { url = "*", fg = "#2a2222" },
+  { url = ".*", fg = "#cfc9cf" },
+]

@@ -1,0 +1,8 @@
+# shellcheck shell=bash
+#
+# ~/.bash_profile
+#
+
+# Login shells share the same environment as interactive shells.
+# shellcheck disable=SC1090  # the path is the user's live bashrc, resolved at login
+[[ -f ~/.bashrc ]] && . ~/.bashrc
