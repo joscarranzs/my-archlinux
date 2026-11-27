@@ -1,0 +1,28 @@
+# Generated theme outputs are committed on purpose so a fresh clone works
+# without running the generator. Regenerate them with
+# scripts/theme/apply-theme.py instead of editing them by hand: the generator
+# overwrites these files on every run.
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Backups
+*.bak
+
+# Wallpaper collections live outside the repository: only the images in
+# `wallpapers/current` are versioned. `default-background` is committed as a
+# symlink to the active one, so the same picture is never stored twice.
+# Committing a collection once cost 445 MB of dead history.
+wallpapers/list/
+wallpapers/trash/
+
+# OS
+.DS_Store
+
+# GTK runtime files
+config/gtk-3.0/bookmarks
+config/gtk-4.0/bookmarks
+
+# Neovim config: separate repository (neovim-config), not tracked here
+config/nvim
