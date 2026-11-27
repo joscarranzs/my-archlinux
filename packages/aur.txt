@@ -1,0 +1,5 @@
+# AUR packages (installed via paru/yay)
+# Install with: paru -S --needed - < packages/aur.txt
+paru-bin
+genoffice-bin
+omasnap-bin

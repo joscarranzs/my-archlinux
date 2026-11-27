@@ -1,0 +1,8 @@
+#!/bin/sh
+# Wrapper for Neovim.
+#
+# Neovim probes the terminal background color via DSR (OSC 11) at startup
+# and waits up to 100ms for an answer; terminals that do not reply trigger
+# the harmless "E1568: Terminal did not respond to DSR request" warning.
+# NVIM_TEST=1 suppresses that warning without changing editor behaviour.
+NVIM_TEST=1 exec /usr/bin/nvim "$@"

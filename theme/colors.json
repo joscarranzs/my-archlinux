@@ -1,0 +1,66 @@
+{
+  "name": "warm-paper",
+  "description": "Warm paper: the warm-charcoal hues, lit from above \u2014 light surfaces, deep inks and the same muted accents",
+  "source": "derived from warm-charcoal by mirroring lightness and re-solving every role against the contrast report",
+  "surface": {
+    "base": "#efecef",
+    "raised": "#e8e5e8",
+    "raisedHigh": "#dfdadf",
+    "line": "#cfc9cf",
+    "border": "#ada4ad",
+    "borderStrong": "#958895",
+    "selection": "#e0dce0",
+    "cursorline": "#e8e5e8"
+  },
+  "text": {
+    "ink": "#2a2222",
+    "inkBright": "#140c0c",
+    "inkSoft": "#3e3535",
+    "inkMuted": "#584b4b",
+    "inkFaint": "#897689"
+  },
+  "accent": {
+    "primary": "#007952",
+    "primaryInk": "#123623",
+    "primaryDeep": "#1a5135",
+    "secondary": "#40685e",
+    "tertiary": "#997900",
+    "tertiaryInk": "#826700",
+    "neutral": "#41736b",
+    "quaternary": "#732a26"
+  },
+  "onAccent": {
+    "primary": "#efecef",
+    "signal": "#efecef"
+  },
+  "signal": {
+    "red": "#d01b31",
+    "orange": "#503d0c",
+    "yellow": "#82661a",
+    "green": "#0f5c35",
+    "purple": "#340b09"
+  },
+  "ansi": {
+    "black": "#534653",
+    "red": "#904b46",
+    "green": "#418662",
+    "yellow": "#7c6b3c",
+    "blue": "#46625b",
+    "magenta": "#673532",
+    "cyan": "#2d5d44",
+    "white": "#afa6a1",
+    "brightBlack": "#7a6c7a",
+    "brightRed": "#542926",
+    "brightGreen": "#214a35",
+    "brightYellow": "#40361c",
+    "brightBlue": "#1f2d29",
+    "brightMagenta": "#2a1413",
+    "brightCyan": "#0e2017",
+    "brightWhite": "#bdb2b2"
+  },
+  "reading": {
+    "comment": "#877887",
+    "green": "#214a35",
+    "cyan": "#2d5d44"
+  }
+}

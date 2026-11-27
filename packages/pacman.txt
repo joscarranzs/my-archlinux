@@ -1,0 +1,88 @@
+# Pacman packages (explicitly installed)
+# Install with: sudo pacman -S --needed - < packages/pacman.txt
+# (lines starting with # are ignored)
+adw-gtk-theme
+base
+base-devel
+bluez
+bluez-utils
+clang
+chromium
+cmake
+efibootmgr
+git
+gnome-keyring
+grim
+grub
+gst-plugin-pipewire
+hypridle
+hyprland
+intel-media-driver
+intel-ucode
+iwd
+kitty
+libpulse
+limine
+linux
+linux-firmware
+mkinitcpio
+nautilus
+neovim
+networkmanager
+nodejs
+npm
+opencode
+openssh
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+pacman-contrib
+papirus-icon-theme
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+power-profiles-daemon
+python-gobject
+quickshell
+rust
+sddm
+sof-firmware
+stow
+sudo
+tree
+ttf-jetbrains-mono-nerd
+ttf-material-symbols-variable
+ufw
+vulkan-intel
+wireplumber
+wtype
+xclip
+xdg-user-dirs
+yazi
+bash-completion
+bat
+eza
+fzf
+starship
+zoxide
+zram-generator
+evince
+imv
+mpv
+wl-clipboard
+# Direct script dependencies (were only pulled in as dependencies before):
+# ffmpeg decodes icons for scripts/icon-contrast.py; python-pillow recolors the
+# SDDM artwork in scripts/theme/sddm-assets.py under /usr/bin/python3.
+ffmpeg
+python-pillow
+
+# iwd is retired (NetworkManager + wpa_supplicant own wlan0); the package stays
+# installed only as the fallback stack for scripts/system/wifi-emergency.sh.
+
+# Fonts. Every family the theme draws with is a pacman package:
+# ttf-jetbrains-mono-nerd (the UI face, the terminal and code, ligatures on) and
+# ttf-material-symbols-variable (icons). ~/.local/share/fonts is empty: Space
+# Grotesk, Space Mono, Fraunces, EB Garamond and Noto Sans JP were deleted, and
+# nothing reinstalls them. Japanese is covered by noto-fonts-cjk (Noto Sans CJK JP).

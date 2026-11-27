@@ -1,0 +1,2 @@
+# npm global packages
+# Install with: npm install -g $(grep -v '^#' packages/npm.txt | tr '\n' ' ')

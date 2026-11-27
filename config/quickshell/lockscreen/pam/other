@@ -1,0 +1,14 @@
+#%PAM-1.0
+# Fail-closed default for this PAM directory. Linux-PAM always loads
+# <confdir>/other alongside the requested service config and keeps it as a
+# separate fallback stack (used only for facilities the service does not
+# define); without this file every unlock logs "no default config other".
+# Mirrors /etc/pam.d/other: an unknown service name here must deny, never pass.
+auth      required   pam_deny.so
+auth      required   pam_warn.so
+account   required   pam_deny.so
+account   required   pam_warn.so
+password  required   pam_deny.so
+password  required   pam_warn.so
+session   required   pam_deny.so
+session   required   pam_warn.so

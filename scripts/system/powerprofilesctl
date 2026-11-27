@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Wrapper so powerprofilesctl uses the system Python (with python-gobject)
+# instead of an earlier Python in PATH (e.g. Hermes' bundled interpreter).
+exec /usr/bin/python3 /usr/bin/powerprofilesctl "$@"

@@ -1,0 +1,7 @@
+[SddmGreeterTheme]
+Name=Arch
+Description=Unlock card for Arch Linux: the lock surface's language before a session starts
+Author=joscarranzs
+Type=sddm-theme
+QtVersion=6
+Version=1.0

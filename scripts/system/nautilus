@@ -1,0 +1,12 @@
+#!/bin/sh
+# Wrapper for Nautilus (Files).
+#
+# Nautilus is a libadwaita/GTK4 application. Forcing GTK_THEME (e.g.
+# Adwaita-dark) makes it fall back to the legacy GTK theme and renders a
+# broken/old UI. Unset it so libadwaita uses its own style plus the
+# desktop color-scheme (prefer-dark).
+unset GTK_THEME
+# Absolute path on purpose: this script shadows nautilus in PATH, so
+# `command -v nautilus` resolves to *this file* and exec-ing it restarts the
+# wrapper forever (no window, no error, a process that never exits).
+exec /usr/bin/nautilus "$@"

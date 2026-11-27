@@ -1,0 +1,20 @@
+# Binaries installed outside pacman (manual install)
+# herdr-core / herdr-app installed via releases.herdr.dev installer -> ~/.local/bin
+hc
+herdr-app
+herdr-core
+# Hermes Agent installer wrappers (~/.local/bin, point at ~/.hermes/installs)
+hermes
+hermes-acp
+hermes-agent
+# Manual script: compact the Hermes state.db (see tools-hermes skill)
+hermes-db-compact
+# jq: static binary dropped into ~/.local/bin (not the pacman package)
+jq
+# tree-sitter CLI: cargo install --root ~/.local tree-sitter-cli
+# (nvim-treesitter v1.x compiles parsers through it; needs >= 0.26.1)
+tree-sitter
+# pygount: pipx-style venv at ~/.local/share/pygount-venv, symlinked into ~/.local/bin
+pygount
+# genoffice: symlink to /opt/GenOffice/resources/cli/genoffice (AUR genoffice-bin)
+genoffice

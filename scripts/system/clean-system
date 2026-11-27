@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Clean the pacman cache without interactive prompts.
+set -euo pipefail
+
+echo "==> Removing leftover pacman download directories"
+sudo find /var/cache/pacman/pkg -maxdepth 1 -type d -name 'download-*' -exec rm -rf {} + 2>/dev/null || true
+
+echo "==> Removing cached package versions (keeping none)"
+# paccache -rk0 has the same effect as `pacman -Scc` but needs no confirmation
+# prompt, so this script stays usable unattended. pacman -Scc always asks
+# "remove ALL files from cache? [y/N]" even with --noconfirm.
+if ! command -v paccache >/dev/null 2>&1; then
+    echo "clean-system: paccache not found (install pacman-contrib)" >&2
+    exit 1
+fi
+sudo paccache -rk0
+
+echo "==> Done"
+du -sh /var/cache/pacman/pkg 2>/dev/null || true

@@ -1,0 +1,16 @@
+{
+  "zoom": 1,
+  "sounds": {
+    "enabled": true
+  },
+  "font_size": 13,
+  "font_ligatures": true,
+  "ui_font": "JetBrainsMono Nerd Font",
+  "minimum_contrast": 1,
+  "appearance": "light",
+  "theme": {
+    "light": "warm-paper",
+    "dark": "warm-paper"
+  },
+  "font": "JetBrainsMono Nerd Font"
+}

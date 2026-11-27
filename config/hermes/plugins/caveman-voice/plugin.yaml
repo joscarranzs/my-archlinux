@@ -1,0 +1,13 @@
+name: caveman-voice
+label: Caveman Voice
+kind: standalone
+version: 0.3.0
+author: joscarranzs
+description: >
+  Terse output mode. Injects a compact "say less" rule set through pre_llm_call
+  once per session (not per turn), so replies stay short while code, paths,
+  numbers and error text stay verbatim. No proxy, no account, no network.
+requires_hermes: ">=0.23"
+provides_tools: []
+provides_hooks:
+  - pre_llm_call

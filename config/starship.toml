@@ -1,0 +1,57 @@
+# warm-charcoal: warm dark surfaces, muted pastel accents.
+
+add_newline = true
+
+# `ip` answers in ~1ms normally, but it can stall for half a second while the
+# network stack reconverges (right after a resume, or during a wifi roam) and the
+# default 500ms cap then prints a warning on every prompt. Give it headroom: the
+# prompt only pays for it when the command is actually slow.
+command_timeout = 1500
+
+[character]
+success_symbol = "[❯](bold #dff1e8)"
+error_symbol = "[❯](bold #d9aeab)"
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+style = "bold #dcd6d6"
+
+[git_branch]
+symbol = " "
+style = "bold #dff1e8"
+
+[git_status]
+style = "bold #b3a8a8"
+
+# Icons por estado de git (color inline, paleta warm-charcoal)
+conflicted = "[bold #d9aeab]="
+ahead = "[bold #dff1e8]⇡${count}"
+behind = "[bold #dff1e8]⇣${count}"
+diverged = "[bold #8fb3ad]⇕"
+untracked = "[bold #dff1e8]?"
+stashed = "[bold #c3b283]📦"
+modified = "[bold #d9aeab]!"
+staged = "[bold #9db9b2]++$count"
+renamed = "[bold #8fb3ad]»"
+deleted = "[bold #d9aeab]✘"
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold #dff1e8) "
+
+[python]
+symbol = " "
+style = "bold #dff1e8"
+
+[nodejs]
+symbol = " "
+style = "bold #c3b283"
+
+[rust]
+symbol = " "
+style = "bold #d9aeab"
+
+[golang]
+symbol = " "
+style = "bold #79be9a"

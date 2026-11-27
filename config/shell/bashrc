@@ -1,0 +1,77 @@
+# shellcheck shell=bash
+#
+# ~/.bashrc
+#
+# Personal shell config (Catppuccin Latte palette: cool paper, mauve accent).
+# Sources: theme/colors.json · config/kitty/theme.conf · config/starship.toml
+# Palette from theme/colors.json; BAT_THEME follows the flavour.
+
+# ── User local binaries, prepended once per shell ──
+for dir in "$HOME/.local/bin" "$HOME/.npm-global/bin"; do
+    case ":$PATH:" in
+        *":$dir:"*) ;;
+        *) export PATH="$dir:$PATH" ;;
+    esac
+done
+unset dir
+
+# ── Editor and pager ──
+export EDITOR=nvim
+export VISUAL=nvim
+export BAT_THEME="Catppuccin Latte"
+
+# ── Interactive-only guard ──
+# Skip anything below for non-interactive shells (scripts / cron / remote).
+[[ $- != *i* ]] && return
+
+# ── History ──
+HISTSIZE=100000
+HISTFILESIZE=200000
+HISTCONTROL=ignoreboth:erasedups
+HISTTIMEFORMAT='%F %T  '
+shopt -s histappend
+shopt -s cmdhist
+
+# ── Completion ──
+if [[ -r /usr/share/bash-completion/bash_completion ]]; then
+    . /usr/share/bash-completion/bash_completion
+fi
+
+# ── Fuzzy finder ──
+# fnv: pick a file with fzf and open it in $EDITOR. The preview is disabled on
+# purpose (fzf 0.74.5 mis-parses its own --preview options), so the picker
+# stays a plain list; fzf reads FZF_DEFAULT_OPTS from the environment.
+if command -v fzf >/dev/null 2>&1; then
+    export FZF_DEFAULT_OPTS='--height=50% --layout=reverse'
+
+    fnv() {
+        local file
+        file=$(fzf --query="${1:-}") && ${EDITOR:-nvim} "$file"
+    }
+fi
+
+# zoxide: smarter cd
+if command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init bash)"
+fi
+
+# starship: prompt
+if command -v starship >/dev/null 2>&1; then
+    eval "$(starship init bash)"
+fi
+
+# ── Aliases ──
+if command -v eza >/dev/null 2>&1; then
+    alias ls='eza --icons --group-directories-first --git'
+    alias ll='eza -lah --icons --git'
+    alias la='eza -a --icons'
+else
+    alias ls='ls --color=auto'
+    alias ll='ls -lah'
+    alias la='ls -a'
+fi
+
+if command -v bat >/dev/null 2>&1; then
+    alias cat='bat --paging=never --style=plain'
+fi
+alias grep='grep --color=auto'

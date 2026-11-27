@@ -1,0 +1,37 @@
+/* Generated from theme/colors.json by scripts/theme/apply-theme.py — do not edit.
+ *
+ * Adwaita reads its colours from these named colours, so redefining them puts a
+ * GTK3 app on this palette without replacing the theme: geometry, widget
+ * behaviour and every other style stay Adwaita's, only the ink changes. That is
+ * the whole point of the exercise — one art direction across the desktop, not a
+ * second theme to maintain.
+ *
+ * Only colours are defined here. Geometry belongs to the theme, and a rule that
+ * re-draws a widget internals is what breaks a GTK app on the next release.
+ */
+@define-color theme_fg_color #2a2222;
+@define-color theme_text_color #2a2222;
+@define-color theme_bg_color #efecef;
+@define-color theme_base_color #e8e5e8;
+@define-color theme_selected_bg_color #007952;
+@define-color theme_selected_fg_color #efecef;
+@define-color theme_unfocused_fg_color #584b4b;
+@define-color theme_unfocused_text_color #2a2222;
+@define-color theme_unfocused_bg_color #efecef;
+@define-color theme_unfocused_base_color #e8e5e8;
+@define-color theme_unfocused_selected_bg_color #007952;
+@define-color theme_unfocused_selected_fg_color #efecef;
+@define-color insensitive_fg_color #897689;
+@define-color insensitive_bg_color #e8e5e8;
+@define-color insensitive_base_color #e8e5e8;
+@define-color borders #ada4ad;
+@define-color unfocused_borders #cfc9cf;
+@define-color content_view_bg #e8e5e8;
+@define-color text_view_bg #e8e5e8;
+@define-color warning_color #82661a;
+@define-color error_color #d01b31;
+@define-color success_color #0f5c35;
+@define-color warning_fg_color #efecef;
+@define-color warning_bg_color #82661a;
+@define-color error_fg_color #efecef;
+@define-color error_bg_color #d01b31;
