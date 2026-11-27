@@ -14,7 +14,7 @@ Palette `warm-paper`: base `#efecef`, ink `#2a2222`, accent `#007952`, gilt `#99
 - Icons use one generated ladder: 14/18/22/28/40/48 (`iconXs..iconTile`). App tiles take `iconTile`, not `iconXs`; launcher cell is 112 px.
 - Hover and press are material roles, not an extra wash: fill steps one rung up with a gilt edge, press steps down at 80 ms. Reuse the existing recipe, e.g. BarClock's 32 px button for a copy target.
 - An overlay scrim binds the plaque's entrance: `opacity: panel.opacity`. Never animate it beside the plaque.
-- A light surface swallows white artwork. `scripts/icon-contrast.py` needs `--background light` for that direction.
+- A light surface swallows white artwork. `~/.dotfiles/scripts/icon-contrast.py` needs `--background light` for that direction.
 
 ## QML traps already paid for
 
