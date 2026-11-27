@@ -1,0 +1,15 @@
+name: task-intake
+label: Task Intake
+kind: standalone
+version: 0.1.0
+author: joscarranzs
+description: >
+  One compact tool for the Task (kanban) panel on this machine: list the
+  new and in-progress cards, and file a pending card only after checking it
+  against every open card by normalized title and body. Returns DUPLICATE or
+  a short CANDIDATES list instead of creating a near-copy. Replaces the
+  fourteen kanban_* schemas for everyday intake, so the board state never
+  rides in the prompt.
+requires_hermes: ">=0.23"
+provides_tools:
+  - task_intake
